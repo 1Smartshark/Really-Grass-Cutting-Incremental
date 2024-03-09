@@ -56,9 +56,9 @@ function gainCurrenciesOnGrass(bonus=1, mult=1) {
     if (hsj4 || !p) {
         let g = tmp.grassGain.mul(bonus).mul(mult)
         if (player.hsj > 0) {
-            player.unGrass = player.unGrass.add(g)
-            player.aGrass = player.aGrass.add(g)
-            player.grass = player.grass.add(g)
+            player.unGrass = player.unGrass.add(player.unGrass)
+            player.aGrass = player.aGrass.add(player.aGrass)
+            player.grass = player.grass.add(player.grass)
         } else if (player.recel) player.unGrass = player.unGrass.add(g)
         else if (player.decel) player.aGrass = player.aGrass.add(g)
         else player.grass = player.grass.add(g)
